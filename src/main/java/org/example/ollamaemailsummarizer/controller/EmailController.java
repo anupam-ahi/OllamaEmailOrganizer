@@ -1,11 +1,13 @@
 package org.example.ollamaemailsummarizer.controller;
 
 import jakarta.mail.MessagingException;
-
 import lombok.RequiredArgsConstructor;
 import org.example.ollamaemailsummarizer.service.EmailService;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/email")
@@ -16,8 +18,13 @@ public class EmailController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public void getEmailStats() throws MessagingException {
-        emailService.emailCount();
+    public String getEmailStats() throws MessagingException {
+        return emailService.emailCount();
+    }
+
+    @GetMapping("/read")
+    public String getFirstEmail() throws Exception {
+        return emailService.readEmail();
     }
 
 

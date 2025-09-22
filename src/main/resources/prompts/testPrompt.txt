@@ -1,0 +1,2 @@
+Invent a random two-sentence fake email subject line and categorize it as either 'Application', 'Success', or 'Rejection'. The subject line must be different each time.
+Make sure to print the fake email content along with the subject while categorizing it.

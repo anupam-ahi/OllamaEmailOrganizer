@@ -13,4 +13,8 @@ public class PromptLoader {
         return new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
 
     }
+    public String loadTestPrompt() throws IOException{
+        ClassPathResource resource = new ClassPathResource("/prompts/testPrompt.txt");
+        return new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+    }
 }

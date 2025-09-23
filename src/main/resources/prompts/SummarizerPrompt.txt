@@ -4,16 +4,16 @@ Input: Raw email content (may include HTML, images, links, or other formatting).
 
 Instructions:
 1. Extract the **main human-readable content** of the email.
-2. Summarize it in a **single concise sentence** or 1–2 sentences (about 20–50 words).
-   - Include key information such as the sender, action requested, or status update.
-   - Capture enough context for categorization (Application / Success / Rejection) but avoid unnecessary details.
-3. **Ignore all HTML tags, images, links, styles, and special characters.**
-4. **Do not include URLs or anything potentially malicious.**
-5. Keep the summary **safe, readable, and consistent** in style across emails.
+2. Summarize it in **one short sentence (20–40 words)** that captures the overall outcome or intent.
+   - Include the decision status if present (e.g., application received, interview invitation, rejection).
+   - If the company declines the application, ensure the rejection is stated clearly in the summary.
+3. Ignore all HTML tags, images, links, styles, and special characters.
+4. Do not include URLs or anything potentially malicious.
+5. Keep the summary safe, neutral, and concise.
 
 Output format:
-- One line of plain text summary per email.
-- Do not add any explanations, headings, or extra formatting.
+- One plain-text summary per email.
+- No extra formatting or explanations.
 
 Example output:
-"Candidate invited to interview on Tuesday; confirmation requested."
+"Cursor thanked the candidate for applying but informed them they are not moving forward with the application."

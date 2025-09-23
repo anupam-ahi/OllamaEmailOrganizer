@@ -41,7 +41,6 @@ public class OllamaService {
     public String categorizeEmail(String emailContent) throws IOException {
         String basePrompt = promptLoader.loadCategorizerPrompt();
         basePrompt = basePrompt + "\n\nEmail:\n" + emailContent;
-        System.out.println(basePrompt);
         return chatClient.prompt()
                 .user(basePrompt)
                 .call()
